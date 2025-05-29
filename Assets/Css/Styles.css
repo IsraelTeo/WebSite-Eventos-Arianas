@@ -452,7 +452,7 @@ a {
 
 /* Galeria de Imagenes */
 .galeria {
-  padding: 2rem;
+  padding-bottom: 8rem;
   color: var(--color-principal);
   background-color: var(--color-blanco);
   text-align: center;
@@ -470,6 +470,7 @@ a {
   justify-content: center;
   max-width: 1400px;
   margin: 0 auto;
+
 }
 
 .galeria-grid img {
