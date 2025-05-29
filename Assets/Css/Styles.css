@@ -366,6 +366,12 @@ a {
   object-fit: cover;
 }
 
+.icon:hover {
+  filter:drop-shadow(12px 15px 15px #4d0353);
+  transition: 0.4s;
+  cursor: pointer;
+}
+
 .features h4 {
   font-size: 1.3rem;
   color: var(--color-secundario);
@@ -764,3 +770,4 @@ footer {
   font-weight: 700;
   font-style: normal;
 }
+
