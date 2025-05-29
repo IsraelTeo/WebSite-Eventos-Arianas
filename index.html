@@ -18,40 +18,40 @@
 <body>
 
   <!--Cabecera-->
+  <div class="loader">
+    <img src="assets/img/logo/logoLoader.png" alt="Logo PuntoCeo" class="loader__img">
+  </div>
   <header class="site-header">
     <div class="container-header">
       <!--Logo-->
       <div class="logo">
         <a href="index.html" rel="home">
-          <img src="assets/img/logo/logo-fotor-20250423151841.png" alt="Logo Eventos Ariana´s">
+          <img src="assets/img/logo/LogoATW.png" alt="Logo Eventos Ariana´s">
         </a>
       </div>
 
+      <input type="checkbox" id="menu-toggle" class="menu-toggle" />
+      <label for="menu-toggle" class="hamburger">
+        <i class="bi bi-list"></i>
+      </label>
+      
       <!--Navegación-->
       <nav class="nav">
-        <ul class="nav-menu poppins-semibold">
-          <li>
-            <a href="#inicio">Inicio</a>
-          </li>
-          <li class="dropdown">
-            <a href="#">Servicios</a>
+        <ul class="nav-menu poppins-medium">
+          <li><a href="#inicio">Inicio</a></li>
+          <li class="dropdown"><a href="#">Servicios</a>
             <ul class="dropdown-menu poppins-semibold">
               <li><a href="/pages/">Boda</a></li>
               <li><a href="/pages/">Cumpleaños</a></li>
-              <li><a href="/pages/">A</a></li>
+              <li><a href="/pages/">Otro</a></li>
             </ul>
           </li>
-          <li>
-            <a href="#paquetes">Paquetes</a>
-          </li>
-          <li>
-            <a href="#nosotros">Nosotros</a>
-          </li>
-          <li>
-            <a href="#contacto">Contacto</a>
-          </li>
+          <li><a href="#paquetes">Paquetes</a></li>
+          <li><a href="#nosotros">Nosotros</a></li>
+          <li><a href="#contacto">Contacto</a></li>
         </ul>
       </nav>
+    
     </div>
   </header>
   <!--Contenido principal-->
@@ -94,7 +94,7 @@
 
     <!-- Nosotros -->
     <section class="about-section" id="nosotros">
-      <div>
+      <div class="info-container">
         <h2 class="EdgecuttingLiteMedium">NUESTRA EMPRESA</h2>
         <p class="poppins-medium">
           Nacimos como proveedores de mobiliario para eventos y al día de hoy nuestro equipo de trabajo ha
@@ -107,25 +107,25 @@
         <h3 class="poppins-semibold">¡Razones para elegirnos!</h3>
         <div class="features">
           <article>
-            <span class="icon">
+            <figure class="icon">
               <img src="assets/img/icons/cheers.png" alt="Diferencia">
-            </span>
+            </figure>
             <h4 class="poppins-medium">Marca la diferencia</h4>
             <p class="poppins-regular">Ofrecemos las ultimas tendencias mundiales</p>
           </article>
 
           <article>
-            <span class="icon">
+            <figure class="icon">
               <img src="assets/img/icons/gift.png" alt="Expertos en cada detalle">
-            </span>
+            </figure>
             <h4 class="poppins-medium">Expertos en cada detalle</h4>
             <p class="poppins-regular">Planificamos cada detalle para que cada momento sea perfecto.</p>
           </article>
 
           <article>
-            <span class="icon">
+            <figure class="icon">
               <img src="assets/img/icons/piggy-bank.png" alt="El lujo no siempre es caro">
-            </span>
+            </figure>
             <h4 class="poppins-medium">El lujo no siempre es caro</h4>
             <p class="poppins-regular">Nos esforzamos por conseguir lo mejor para tu presupuesto.</p>
           </article>
@@ -145,7 +145,7 @@
     <!--Paquetes-->
     <!--Tabla-->
     <section class="package-section" id="paquetes">
-      <h2 class="EdgecuttingLiteMedium">NUESTROS PAQUETES</h2>
+      <h2 class="title-table EdgecuttingLiteMedium">NUESTROS PAQUETES</h2>
       <table class="package-table">
         <thead>
           <tr>
@@ -229,7 +229,7 @@
             </div>
           </article>
         </div>
-        
+
         <!--Formulario-->
         <div class="form-container">
           <h3>¡Contáctanos!</h3>
@@ -281,8 +281,8 @@
       </div>
     </section>
     <a href="//wa.me/51915360088?text=¡Hola%20!%20%F0%9F%91%8B%20Quiero%20más%20información%20sobre%20sus%20servicios."
-        class="whatsapp-float" target="_blank" title="Chatea con nosotros por WhatsApp">
-        <i class="bi bi-whatsapp"></i>
+      class="whatsapp-float" target="_blank" title="Chatea con nosotros por WhatsApp">
+      <i class="bi bi-whatsapp"></i>
     </a>
 
   </main>
@@ -290,52 +290,52 @@
   <!--Pie de página-->
   <footer class="txt-center">
     <div class="footer__content d-flex item-center">
-        <div class="footer__logo">
-            <img src="assets/img/logo/logo-fotor-20250423151841.png" alt="Logo Eventos Ariana's">
+      <div class="footer__logo">
+        <img src="assets/img/logo/LogoATW.png" alt="Logo Eventos Ariana's">
+      </div>
+
+      <div class="footer__links d-flex">
+        <div class="footer__section">
+          <h4 class="poppins-semibold">LEGALES</h4>
+          <a href="/terminos" class="poppins-light">TÉRMINOS Y CONDICIONES</a>
+          <a href="/cookies" class="poppins-light">POLÍTICA DE COOKIES</a>
+          <a href="/contratacion" class="poppins-light">POLÍTICA DE TERMINOS Y CONDICIONES DE CONTRATACIÓN</a>
         </div>
 
-        <div class="footer__links d-flex">
-            <div class="footer__section">
-                <h4 class="poppins-semibold">LEGALES</h4>
-                <a href="/terminos" class="poppins-light">TÉRMINOS Y CONDICIONES</a>
-                <a href="/cookies" class="poppins-light">POLÍTICA DE COOKIES</a>
-                <a href="/contratacion" class="poppins-light">POLÍTICA DE TERMINOS Y CONDICIONES DE CONTRATACIÓN</a>
-            </div>
-
-            <div class="footer__section">
-                <h4 class="poppins-semibold">CONTACTO</h4>
-                <p>
-                    <a href="tel:+51950133911" class="poppins-light">
-                        <i class="bi bi-phone me-2"></i> +51 950 133 911
-                    </a>
-                </p>
-                <p>
-                    <a href="mailto:puntoceo@mktceo.com" class="poppins-light">
-                        <i class="bi bi-envelope me-2"></i> ariana@eventos.com
-                    </a>
-                </p>
-            </div>
-
-            <div class="footer__section">
-                <h4 class="poppins-semibold">REDES SOCIALES</h4>
-                <div class="social__links d-flex">
-                    <a href="https://www.facebook.com/profile.php?id=61572937177015&locale=es_LA" target="_blank"
-                        title="Facebook">
-                        <i class="bi bi-facebook"></i>
-                    </a>
-                    <a href="https://www.instagram.com/puntoceo.mkt/" target="_blank" title="Instagram">
-                        <i class="bi bi-instagram"></i>
-                    </a>
-                    <a href="https://www.tiktok.com/@puntoceo.mkt?lang=es" target="_blank" title="TikTok">
-                        <i class="bi bi-tiktok"></i>
-                    </a>
-                </div>
-            </div>
+        <div class="footer__section">
+          <h4 class="poppins-semibold">CONTACTO</h4>
+          <p>
+            <a href="tel:+51950133911" class="poppins-light">
+              <i class="bi bi-phone me-2"></i> +51 950 133 911
+            </a>
+          </p>
+          <p>
+            <a href="mailto:puntoceo@mktceo.com" class="poppins-light">
+              <i class="bi bi-envelope me-2"></i> ariana@eventos.com
+            </a>
+          </p>
         </div>
+
+        <div class="footer__section">
+          <h4 class="poppins-semibold">REDES SOCIALES</h4>
+          <div class="social__links d-flex">
+            <a href="https://www.facebook.com/profile.php?id=61572937177015&locale=es_LA" target="_blank"
+              title="Facebook">
+              <i class="bi bi-facebook"></i>
+            </a>
+            <a href="https://www.instagram.com/puntoceo.mkt/" target="_blank" title="Instagram">
+              <i class="bi bi-instagram"></i>
+            </a>
+            <a href="https://www.tiktok.com/@puntoceo.mkt?lang=es" target="_blank" title="TikTok">
+              <i class="bi bi-tiktok"></i>
+            </a>
+          </div>
+        </div>
+      </div>
     </div>
     <div class="footer__bottom d-flex">
-        <p class="poppins-light">Eventos Ariana's - R.U.C. 8451835241858</p>
-        <p>&copy; 2025 Eventos Ariana´s. Todos los derechos reservados.</p>
+      <p class="poppins-light">Eventos Ariana's - R.U.C. 8451835241858</p>
+      <p>&copy; 2025 Eventos Ariana´s. Todos los derechos reservados.</p>
     </div>
 </body>
 
