@@ -1,3 +1,4 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 @font-face {
@@ -75,6 +76,12 @@ a {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
 }
 
 .logo img {
@@ -498,7 +505,7 @@ footer {
   text-decoration: none;
   font-size: 1rem;
   display: block;
-  margin-bottom: 5px;;
+  margin-bottom: 5px;
 }
 .social__links {
   display: flex;
@@ -584,4 +591,120 @@ footer {
   font-family: "Poppins", serif;
   font-weight: 700;
   font-style: normal;
+}
+
+/* Responsive para pantallas menores a 1024px (tablets) */
+@media (max-width: 1024px) {
+  .nav-menu {
+    gap: 20px;
+    font-size: 18px;
+    padding-right: 20px;
+  }
+
+  .main-title {
+    font-size: 3.5rem;
+  }
+
+  .about-section h2 {
+    font-size: 3rem;
+  }
+
+  .features {
+    gap: 60px;
+  }
+
+  .package-section h2 {
+    font-size: 3rem;
+    margin: 50px;
+  }
+
+  .contact-info-container {
+    padding: 60px 30px;
+  }
+
+  .info-item {
+    gap: 20px;
+  }
+
+  .form-container {
+    padding: 40px;
+  }
+}
+
+/* Responsive para pantallas menores a 768px (celulares) */
+@media (max-width: 768px) {
+  .container-header {
+    padding: 0 20px;
+    flex-direction: column;
+    gap: 10px;
+    height: auto;
+  }
+
+  .logo img {
+    width: 90px;
+    height: auto;
+  }
+
+  .nav-menu {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    padding-right: 0;
+  }
+
+  .main-title {
+    font-size: 2.5rem;
+    padding: 0 10px;
+  }
+
+  .features {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .features article {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .package-section table {
+    width: 100%;
+    font-size: 1rem;
+    overflow-x: auto;
+    display: block;
+  }
+
+  .contact-container {
+    flex-direction: column;
+    min-width: 100%;
+  }
+
+  .contact-info-container, 
+  .form-container {
+    width: 100%;
+    padding: 30px;
+  }
+
+  .redes-container h3 {
+    font-size: 1.8rem;
+  }
+
+  .redes-container a i {
+    font-size: 1.8rem;
+    padding: 15px;
+  }
+
+  .about-section h2 {
+    font-size: 2.5rem;
+  }
+
+  .about-section p {
+    font-size: 1.2rem;
+    padding: 0 10px;
+  }
+
+  .package-section h2 {
+    font-size: 2.5rem;
+  }
 }
