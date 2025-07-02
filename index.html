@@ -11,6 +11,7 @@
 
   <title>Eventos Ariana's | Organización de Bodas, Quinceañeros y Más</title>
 
+  <link rel="stylesheet" href="assets/css/general.css">
   <link rel="stylesheet" href="assets/css/styles.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 </head>
@@ -18,42 +19,43 @@
 <body>
 
   <!--Cabecera-->
-  <div class="loader">
+  <!-- <div class="loader">
     <img src="assets/img/logo/logoLoader.png" alt="Logo PuntoCeo" class="loader__img">
-  </div>
+  </div> -->
   <header class="site-header">
     <div class="container-header">
-      <!--Logo-->
+      <!-- Logo -->
       <div class="logo">
         <a href="index.html" rel="home">
-          <img src="assets/img/logo/LogoATW.png" alt="Logo Eventos Ariana´s">
+          <img src="assets/img/logo/LogoATW.webp" alt="Logo Eventos Ariana´s">
         </a>
       </div>
 
-      <input type="checkbox" id="menu-toggle" class="menu-toggle" />
-      <label for="menu-toggle" class="hamburger">
+      <!-- Botón Hamburguesa -->
+      <div class="hamburger" id="hamburger">
         <i class="bi bi-list"></i>
-      </label>
+      </div>
 
-      <!--Navegación-->
+      <!-- Navegación -->
       <nav class="nav">
-        <ul class="nav-menu poppins-medium">
-          <li><a href="#inicio">Inicio</a></li>
-          <li class="dropdown"><a href="#">Servicios</a>
+        <ul class="nav-menu poppins-medium" id="nav-menu">
+          <li><a href="#inicio" class="active">Inicio</a></li>
+          <li><a href="#nosotros">Nosotros</a></li>
+          <li><a href="#paquetes">Paquetes</a></li>
+          <li class="dropdown">
+            <a href="services.html" class="dropdown-toggle">Servicios</a>
             <ul class="dropdown-menu poppins-semibold">
               <li><a href="/pages/">Boda</a></li>
               <li><a href="/pages/">Cumpleaños</a></li>
               <li><a href="/pages/">Otro</a></li>
             </ul>
           </li>
-          <li><a href="#paquetes">Paquetes</a></li>
-          <li><a href="#nosotros">Nosotros</a></li>
           <li><a href="#contacto">Contacto</a></li>
         </ul>
       </nav>
-
     </div>
   </header>
+
   <!--Contenido principal-->
   <main>
     <!--Inicio-->
@@ -61,32 +63,26 @@
       <div class="main-container">
         <div class="banner-overlay"></div>
         <h1 class="main-title EdgecuttingLiteMedium">
-          ¡Tu evento soñado, <br>Nuestra especialidad!
+          ¡Tu evento soñado,<br>Nuestra especialidad!
         </h1>
 
-        <input type="radio" name="slider" id="slide1" checked hidden>
-        <input type="radio" name="slider" id="slide2" hidden>
-        <input type="radio" name="slider" id="slide3" hidden>
-
-        <!-- Contenedor de imágenes -->
-        <div class="container-images">
-          <div class="carousel-slide slide1">
-            <img src="assets/img/kids/fiesta_granja.jpg" alt="Imagen Quinceaños">
+        <div class="container-images" id="carousel">
+          <div class="carousel-slide">
+            <img src="assets/img/kids/fiesta_granja.webp" alt="Imagen Granja">
           </div>
-          <div class="carousel-slide slide2">
-            <img src="assets/img/baby_showers/masculino3.jpg" alt="Imagen Graduacion">
+          <div class="carousel-slide">
+            <img src="assets/img/baby_showers/masculino3.webp" alt="Imagen Baby Shower">
           </div>
-          <div class="carousel-slide slide3">
-            <img src="assets/img/quinceañeros/quince.jpg" alt="Imagen Boda">
+          <div class="carousel-slide">
+            <img src="assets/img/quinceañeros/quince.webp" alt="Imagen Quinceaños">
           </div>
         </div>
 
-        <div class="main-dots">
-          <label for="slide1" class="dot"></label>
-          <label for="slide2" class="dot"></label>
-          <label for="slide3" class="dot"></label>
+        <div class="main-dots" id="carousel-dots">
+          <span class="dot active" data-index="0"></span>
+          <span class="dot" data-index="1"></span>
+          <span class="dot" data-index="2"></span>
         </div>
-
       </div>
     </section>
 
@@ -116,7 +112,7 @@
 
           <article>
             <figure class="icon">
-              <img src="assets/img/icons/gift.png" alt="Expertos en cada detalle">
+              <img src="assets/img/icons/iconoCorazon.png" alt="Expertos en cada detalle">
             </figure>
             <h4 class="poppins-medium">Expertos en cada detalle</h4>
             <p class="poppins-regular">Planificamos cada detalle para que cada momento sea perfecto.</p>
@@ -132,7 +128,7 @@
 
           <article>
             <span class="icon">
-              <img src="assets/img/icons/holidays-party.png" alt="Una celebración que refleja tu esencia">
+              <img src="assets/img/icons/iconoHombreBailando (2).png" alt="Una celebración que refleja tu esencia">
             </span>
             <h4 class="poppins-medium">Fiestas Inolvidables</h4>
             <p class="poppins-regular">Escuchamos tus ideas y sueños para hacerlo realidad</p>
@@ -182,6 +178,26 @@
           </tr>
         </tbody>
       </table>
+    </section>
+
+    <section class="galeria">
+      <h2>GALERÍA IMAGENES</h2>
+      <div class="galeria-grid">
+        <img src="/assets/img/cumpleaños/cumpleaños_cristiano.jpg" loading="lazy" alt="Foto de cumpleaños cristiano">
+        <img src="/assets/img/baby_showers/masculino.jpg" loading="lazy" alt="Foto de baby shower">
+        <img src="/assets/img/graduaciones/hora_loca.jpg" loading="lazy" alt="Foto de graduacion">
+        <img src="/assets/img/kids/fiesta_granja.webp" loading="lazy" alt="Foto de Fiesta tematica granja">
+        <img src="/assets/img/50_anios/mesa_completa.jpg" loading="lazy" alt="Foto de mesa completa evento de 50 años">
+        <img src="/assets/img/quinceañeros/quinceañera.jpg" loading="lazy" alt="Foto quinceañero">
+        <img src="/assets/img/bautizos/decoracion.jpg" loading="lazy" alt="Foto de decoracion">
+        <img src="/assets/img/despedida_soltera/amigas_solteras_por_siempre.jpg" loading="lazy"
+          alt="Foto de despedida de soltera">
+        <img src="/assets/img/cumpleaños/cumpleaños_ramdom.jpg" loading="lazy" alt="Foto de cumpleaños random">
+        <img src="/assets/img/50_anios/pastel.jpg" loading="lazy" alt="Foto de paste de 40 años">
+        <img src="/assets/img/baby_showers/decoracion_leoncito.jpg" loading="lazy" alt="Foto decoracion de leon">
+        <img src="/assets/img/despedida_soltera/piscina.jpg" loading="lazy" alt="Foto de despedida de soltera">
+
+      </div>
     </section>
 
     <!--Contacto-->
@@ -288,13 +304,13 @@
   </main>
 
   <!--Pie de página-->
-  <footer class="txt-center">
-    <div class="footer__content d-flex item-center">
+  <footer>
+    <div class="footer__content">
       <div class="footer__logo">
-        <img src="assets/img/logo/LogoATW.png" alt="Logo Eventos Ariana's">
+        <img src="assets/img/logo/LogoATW.webp" alt="Logo Eventos Ariana's">
       </div>
 
-      <div class="footer__links d-flex">
+      <div class="footer__links">
         <div class="footer__section">
           <h4 class="poppins-semibold">LEGALES</h4>
           <a href="/terminos" class="poppins-light">TÉRMINOS Y CONDICIONES</a>
@@ -318,7 +334,7 @@
 
         <div class="footer__section">
           <h4 class="poppins-semibold">REDES SOCIALES</h4>
-          <div class="social__links d-flex">
+          <div class="social__links">
             <a href="https://www.facebook.com/profile.php?id=61572937177015&locale=es_LA" target="_blank"
               title="Facebook">
               <i class="bi bi-facebook"></i>
@@ -333,10 +349,14 @@
         </div>
       </div>
     </div>
-    <div class="footer__bottom d-flex">
+    <div class="footer__bottom">
       <p class="poppins-light">Eventos Ariana's - R.U.C. 8451835241858</p>
       <p>&copy; 2025 Eventos Ariana´s. Todos los derechos reservados.</p>
     </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/navbar.js"></script>
 </body>
 
 </html>

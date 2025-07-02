@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servicios | Eventos Ariana's</title>
+    <link rel="stylesheet" href="/assets/css/general.css">
+    <link rel="stylesheet" href="/assets/css/Services.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="container-header">
+            <div class="logo"><img src="assets/img/logo/LogoATW.webp" alt="Logo Eventos Ariana's"></div>
+
+            <div class="hamburger" id="hamburger">
+                <i class="bi bi-list"></i>
+            </div>
+
+            <nav class="nav">
+                <ul class="nav-menu poppins-medium" id="nav-menu">
+                    <li><a href="/index.html">Inicio</a></li>
+                    <li><a href="#services" class="active">Servicios</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div style="height: 150px; background-color: black;"></div>
+
+    <!-- Sección de Servicios -->
+    <section class="servicios-section" id="services">
+        <h1 class="poppins-bold">Nuestros Servicios</h1>
+        <div class="servicios-container"></div>
+    </section>
+
+    <!-- Modal -->
+    <div class="modal-overlay">
+        <div class="modal">
+            <span class="close-modal">&times;</span>
+            <img src="" alt="Imagen ampliada" class="modal-img-principal">
+            <h2></h2>
+            <p></p>
+            <div class="modal-galeria">
+                <!-- Miniaturas o carrusel -->
+            </div>
+        </div>
+    </div>
+
+    <a href="//wa.me/51915360088?text=¡Hola%20!%20%F0%9F%91%8B%20Quiero%20más%20información%20sobre%20sus%20servicios."
+        class="whatsapp-float" target="_blank" title="Chatea con nosotros por WhatsApp">
+        <i class="bi bi-whatsapp"></i>
+    </a>
+
+    <footer>
+        <div class="footer__content">
+            <div class="footer__logo">
+                <img src="assets/img/logo/LogoATW.webp" alt="Logo Eventos Ariana's">
+            </div>
+
+            <div class="footer__links">
+                <div class="footer__section">
+                    <h4 class="poppins-semibold">LEGALES</h4>
+                    <a href="/terminos" class="poppins-light">TÉRMINOS Y CONDICIONES</a>
+                    <a href="/cookies" class="poppins-light">POLÍTICA DE COOKIES</a>
+                    <a href="/contratacion" class="poppins-light">POLÍTICA DE TERMINOS Y CONDICIONES DE CONTRATACIÓN</a>
+                </div>
+
+                <div class="footer__section">
+                    <h4 class="poppins-semibold">CONTACTO</h4>
+                    <p>
+                        <a href="tel:+51950133911" class="poppins-light">
+                            <i class="bi bi-phone me-2"></i> +51 950 133 911
+                        </a>
+                    </p>
+                    <p>
+                        <a href="mailto:puntoceo@mktceo.com" class="poppins-light">
+                            <i class="bi bi-envelope me-2"></i> ariana@eventos.com
+                        </a>
+                    </p>
+                </div>
+
+                <div class="footer__section">
+                    <h4 class="poppins-semibold">REDES SOCIALES</h4>
+                    <div class="social__links">
+                        <a href="https://www.facebook.com/profile.php?id=61572937177015&locale=es_LA" target="_blank"
+                            title="Facebook">
+                            <i class="bi bi-facebook"></i>
+                        </a>
+                        <a href="https://www.instagram.com/puntoceo.mkt/" target="_blank" title="Instagram">
+                            <i class="bi bi-instagram"></i>
+                        </a>
+                        <a href="https://www.tiktok.com/@puntoceo.mkt?lang=es" target="_blank" title="TikTok">
+                            <i class="bi bi-tiktok"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer__bottom">
+            <p class="poppins-light">Eventos Ariana's - R.U.C. 8451835241858</p>
+            <p>&copy; 2025 Eventos Ariana´s. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <a href="#" class="mensaje-float" title="Escríbenos" id="abrirFormulario">
+        <i class="bi bi-chat-dots"></i>
+    </a>
+
+    <!-- Mini formulario flotante (no bloquea página) -->
+    <div class="floating-form" id="formularioFlotante">
+        <form id="formContactoFlotante">
+            <span class="cerrar-form" id="cerrarFormulario">&times;</span>
+
+            <div>
+                <label for="nombreApellido">Nombre y Apellido</label>
+                <input type="text" id="nombreApellido" name="nombreApellido" placeholder="Juan Pérez" required>
+            </div>
+            <div>
+                <label for="correo">Correo electrónico</label>
+                <input type="email" id="correo" name="correo" placeholder="juan@gmail.com" required>
+            </div>
+            <div>
+                <label for="númeroTelefónico">Número telefónico</label>
+                <input type="tel" id="númeroTelefónico" name="númeroTelefónico" placeholder="915360088"
+                    pattern="9[0-9]{8}" title="Debe comenzar con 9 y tener 9 dígitos" required>
+            </div>
+            <div>
+                <label for="servicio">Servicio</label>
+                <select id="servicio" name="servicio" required>
+                    <option value="">---Seleccione un servicio---</option>
+                    <option value="cumpleaños">Cumpleaños</option>
+                    <option value="fiesta infantil">Fiesta infantil</option>
+                    <option value="baby shower">Baby shower</option>
+                    <option value="boda">Boda</option>
+                    <option value="evento corporativo">Evento corporativo</option>
+                    <option value="quinceañero">Quinceañero</option>
+                    <option value="graduación">Graduación</option>
+                    <option value="bautizo">Bautizo</option>
+                    <option value="despedida de soltera">Despedida de soltera</option>
+                    <option value="50 años">50 años</option>
+                    <option value="otro">Otro</option>
+                </select>
+            </div>
+            <div>
+                <label for="mensaje">Mensaje</label>
+                <textarea id="mensaje" name="mensaje" placeholder="Escribe tu mensaje aquí..." rows="4"></textarea>
+            </div>
+            <div>
+                <input type="submit" class="poppins-regular" value="Enviar">
+            </div>
+
+            <p id="mensajeError" style="color: red; display: none;">Por favor, completa todos los campos.</p>
+            <p id="mensajeExito" style="color: green; display: none;">¡Mensaje enviado con éxito!</p>
+        </form>
+    </div>
+
+    <script src="js/navbar.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/Services.js"></script>
+</body>
+
+</html>
