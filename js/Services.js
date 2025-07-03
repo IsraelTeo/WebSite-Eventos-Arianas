@@ -1,4 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
+
+    console.log("DOM completamente cargado.");
+
     const servicios = [{
             nombre: "Fiesta de 50 años",
             descripcion: "Celebra medio siglo con una fiesta inolvidable. Decoración elegante, música en vivo y detalles personalizados.",
@@ -88,6 +91,8 @@ document.addEventListener("DOMContentLoaded", () => {
         },
     ];
 
+    console.log("Servicios cargados:", servicios);
+
     const contenedor = document.querySelector(".servicios-container");
     const modalOverlay = document.querySelector(".modal-overlay");
     const modal = document.querySelector(".modal");
@@ -98,6 +103,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const galeriaContenedor = modal.querySelector(".modal-galeria");
 
     servicios.forEach(servicio => {
+        console.log("Creando tarjeta para:", servicio.nombre);
         const card = document.createElement("div");
         card.className = "servicio-card";
 
@@ -108,22 +114,27 @@ document.addEventListener("DOMContentLoaded", () => {
         `;
 
         card.addEventListener("click", () => {
+            console.log(`Tarjeta clickeada: ${servicio.nombre}`);
             modalTitle.textContent = servicio.nombre;
             modalDesc.textContent = servicio.descripcion;
             modalImg.src = servicio.imagen;
             galeriaContenedor.innerHTML = "";
 
             if (servicio.galeria && servicio.galeria.length > 0) {
+                console.log(`Cargando galería de ${servicio.nombre}`, servicio.galeria);
                 servicio.galeria.forEach(src => {
                     const img = document.createElement("img");
                     img.src = src;
                     img.alt = servicio.nombre;
                     img.classList.add("galeria-img");
                     img.addEventListener("click", () => {
+                        console.log(`Imagen de galería seleccionada: ${src}`);
                         modalImg.src = src;
                     });
                     galeriaContenedor.appendChild(img);
                 });
+            } else {
+                console.log(`No hay galería para ${servicio.nombre}`);
             }
 
             modalOverlay.style.display = "flex";
@@ -133,11 +144,13 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     modalClose.addEventListener("click", () => {
+        console.log("Modal cerrado por botón.");
         modalOverlay.style.display = "none";
     });
 
     modalOverlay.addEventListener("click", (e) => {
         if (e.target === modalOverlay) {
+            console.log("Modal cerrado al hacer clic fuera del contenido.");
             modalOverlay.style.display = "none";
         }
     });
@@ -150,8 +163,21 @@ document.addEventListener("DOMContentLoaded", () => {
     const errorMsg = document.getElementById("mensajeError");
     const exitoMsg = document.getElementById("mensajeExito");
 
+    const datosGuardados = localStorage.getItem("datosFormulario");
+    
+    if (datosGuardados) {
+    console.log("🔁 Cargando datos guardados desde localStorage");
+    const datos = JSON.parse(datosGuardados);
+    document.getElementById("nombreApellido").value = datos.nombre || "";
+    document.getElementById("correo").value = datos.correo || "";
+    document.getElementById("númeroTelefónico").value = datos.telefono || "";
+    document.getElementById("servicio").value = datos.servicio || "";
+    document.getElementById("mensaje").value = datos.mensaje || "";
+}
+
     abrirFormBtn.addEventListener("click", (e) => {
         e.preventDefault();
+        console.log("Formulario flotante abierto.");
         formularioFlotante.style.display = "block";
         errorMsg.style.display = "none";
         exitoMsg.style.display = "none";
@@ -159,6 +185,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     cerrarFormBtn.addEventListener("click", () => {
+        console.log("Formulario flotante cerrado.");
         formularioFlotante.style.display = "none";
     });
 
@@ -169,20 +196,28 @@ document.addEventListener("DOMContentLoaded", () => {
         const telefono = document.getElementById("númeroTelefónico").value.trim();
         const servicio = document.getElementById("servicio").value.trim();
 
+        console.log("Formulario enviado con valores:", { nombre, correo, telefono, servicio });
+
         if (!nombre || !correo || !telefono || !servicio) {
+            console.log("Error: campos vacíos.");
             errorMsg.style.display = "block";
             exitoMsg.style.display = "none";
         } else if (!/^\S+@\S+\.\S+$/.test(correo)) {
+            console.log("Error: correo no válido.");
             errorMsg.textContent = "Correo electrónico no válido.";
             errorMsg.style.display = "block";
             exitoMsg.style.display = "none";
         } else {
+            console.log("Formulario válido. Mostrando mensaje de éxito.");
             errorMsg.style.display = "none";
             exitoMsg.style.display = "block";
             formFlotante.reset();
             setTimeout(() => {
+                console.log("Cerrando formulario después del éxito.");
                 formularioFlotante.style.display = "none";
             }, 2000);
         }
+        
     });
+
 });
