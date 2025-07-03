@@ -31,8 +31,6 @@ document.addEventListener("DOMContentLoaded", () => {
             dropdown.classList.toggle("open");
         }
     });
-<<<<<<< HEAD
-=======
 
     document.querySelectorAll(".nav-menu a").forEach(link => {
         link.addEventListener("click", (e) => {
@@ -44,7 +42,6 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         });
     });
->>>>>>> 63f763873f1895643e10a8c860aa6da1d4f482b4
 });
 
 // Destaca hover segun la seccion visible
@@ -120,7 +117,12 @@ document.addEventListener("DOMContentLoaded", () => {
         const telefono = document.getElementById("númeroTelefónico").value.trim();
         const servicio = document.getElementById("servicio").value.trim();
 
-        console.log("Formulario enviado con:", { nombre, correo, telefono, servicio });
+        console.log("Formulario enviado con:", {
+            nombre,
+            correo,
+            telefono,
+            servicio
+        });
 
         if (!nombre || !correo || !telefono || !servicio) {
             console.log("Error: campo vacío detectado.");
@@ -136,7 +138,12 @@ document.addEventListener("DOMContentLoaded", () => {
             errorMsg.style.display = "none";
             exitoMsg.style.display = "block";
 
-            const datosUsuario = { nombre, correo, telefono, servicio };
+            const datosUsuario = {
+                nombre,
+                correo,
+                telefono,
+                servicio
+            };
             localStorage.setItem("datosFormulario", JSON.stringify(datosUsuario));
             console.log("Datos guardados en localStorage:", datosUsuario);
 
