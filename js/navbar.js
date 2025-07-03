@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const hamburger = document.getElementById("hamburger");
     const navMenu = document.getElementById("nav-menu");
 
-    console.log("Menu hamburguesa y dropdown inicializados.");
+    console.log("Menu hamburguesa inicializado.");
 
     hamburger.addEventListener("click", () => {
         console.log("Hamburger clickeado.");
