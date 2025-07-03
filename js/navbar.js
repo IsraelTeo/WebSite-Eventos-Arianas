@@ -128,8 +128,9 @@ document.addEventListener("DOMContentLoaded", () => {
             console.log("Error: campo vacío detectado.");
             errorMsg.style.display = "block";
             exitoMsg.style.display = "none";
-        } else if (!/^\S+@\S+\.\S+$/.test(correo)) {
+        } else if (!/^\S+@\S+\.com$/.test(correo)) {
             console.log("Error: correo no válido.");
+            alert(`Error: correo no válido, ingrese uno válido.`);
             errorMsg.textContent = "Correo electrónico no válido.";
             errorMsg.style.display = "block";
             exitoMsg.style.display = "none";
