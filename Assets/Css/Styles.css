@@ -59,11 +59,12 @@
 }
 
 .main-title {
+  font-weight: 800;
   position: absolute;
   top: 35%;
   z-index: 2;
   color: var(--color-blanco);
-  font-size: clamp(3.5rem, 5vw, 8rem);
+  font-size: clamp(3.5rem, 6vw, 8rem);
   text-align: center;
 }
 

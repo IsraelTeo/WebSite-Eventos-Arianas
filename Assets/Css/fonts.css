@@ -1,0 +1,23 @@
+@font-face {
+    font-family: "Eduardo";
+    font-weight: 400;
+    src: url(/assets/fonts/AntoniaH3-Medium.ttf);
+}
+
+@font-face {
+    font-family: "Eduardo";
+    font-weight: 800;
+    src: url(/assets/fonts/AntoniaText-BoldItalic.ttf);
+}
+
+@font-face {
+    font-family: "Eduardo";
+    font-weight: 600;
+    src: url(/assets/fonts/AntoniaH2-SemiBold.ttf);
+}
+
+@font-face {
+    font-family: "Eduardo";
+    font-weight: 800;
+    src: url(/assets/fonts/AntoniaH2-Regular.ttf);
+}
