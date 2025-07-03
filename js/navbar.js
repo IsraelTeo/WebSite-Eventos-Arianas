@@ -12,8 +12,6 @@ window.addEventListener('scroll', () => {
 document.addEventListener("DOMContentLoaded", () => {
     const hamburger = document.getElementById("hamburger");
     const navMenu = document.getElementById("nav-menu");
-    const dropdownToggle = document.querySelector(".dropdown-toggle");
-    const dropdown = document.querySelector(".dropdown");
 
     hamburger.addEventListener("click", () => {
         navMenu.classList.toggle("active");
@@ -25,16 +23,6 @@ document.addEventListener("DOMContentLoaded", () => {
             e.preventDefault();
             dropdown.classList.toggle("open");
         }
-    });
-
-    document.querySelectorAll(".nav-menu a").forEach(link => {
-        link.addEventListener("click", (e) => {
-            const isDropdownToggle = link.classList.contains("dropdown-toggle");
-            if (!isDropdownToggle) {
-                navMenu.classList.remove("active");
-                dropdown.classList.remove("open");
-            }
-        });
     });
 });
 

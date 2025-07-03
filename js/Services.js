@@ -38,7 +38,9 @@ document.addEventListener("DOMContentLoaded", () => {
                 "../assets/img/graduaciones/aaa.jpg",
                 "../assets/img/graduaciones/promocion_primaria.jpg",
                 "../assets/img/graduaciones/promocion.jpg",
-                "../assets/img/graduaciones/escenario2.jpg"
+                "../assets/img/graduaciones/escenario2.jpg",
+                "../assets/img/graduaciones/el_causa.jpg",
+                "../assets/img/graduaciones/hora_loca.jpg",
             ]
         },
         {
@@ -53,8 +55,8 @@ document.addEventListener("DOMContentLoaded", () => {
             ]
         },
         {
-            nombre: "Cumpleaños",
-            descripcion: "Desde cumpleaños infantiles hasta adultos, hacemos que cada celebración sea única.",
+            nombre: "Decoraciones",
+            descripcion: "Desde decoraciones para cumpleaños infantiles hasta adultos, hacemos que cada celebración sea única.",
             imagen: "../assets/img/cumpleaños/cumpleaños_ramdom.jpg",
             galeria: [
                 "../assets/img/cumpleaños/cumpleaños_cristiano.jpg",
@@ -83,7 +85,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 "../assets/img/quinceañeros/quinceañera_y_escenario.jpg",
                 "../assets/img/quinceañeros/quinceañera_y_barman.jpg"
             ]
-        }
+        },
     ];
 
     const contenedor = document.querySelector(".servicios-container");
