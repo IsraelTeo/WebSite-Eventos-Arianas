@@ -1,7 +1,4 @@
 document.addEventListener("DOMContentLoaded", () => {
-    // -------------------------------
-    // MODAL DE SERVICIOS
-    // -------------------------------
     const servicios = [{
             nombre: "Fiesta de 50 años",
             descripcion: "Celebra medio siglo con una fiesta inolvidable. Decoración elegante, música en vivo y detalles personalizados.",
@@ -163,7 +160,6 @@ document.addEventListener("DOMContentLoaded", () => {
         formularioFlotante.style.display = "none";
     });
 
-    // Validación simple
     formFlotante.addEventListener("submit", function (e) {
         e.preventDefault();
         const nombre = document.getElementById("nombreApellido").value.trim();

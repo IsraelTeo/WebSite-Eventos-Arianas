@@ -1,3 +1,4 @@
+// Cambio del header al scrollear
 window.addEventListener('scroll', () => {
     const header = document.querySelector('.site-header');
     if (window.scrollY > 50) {
@@ -7,6 +8,7 @@ window.addEventListener('scroll', () => {
     }
 });
 
+// Control de menu hamburguesa
 document.addEventListener("DOMContentLoaded", () => {
     const hamburger = document.getElementById("hamburger");
     const navMenu = document.getElementById("nav-menu");
@@ -36,7 +38,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 
-
+// Destaca hover segun la seccion visible
 document.addEventListener("DOMContentLoaded", () => {
     const sections = document.querySelectorAll("section[id]");
     const navLinks = document.querySelectorAll(".nav-menu a");
